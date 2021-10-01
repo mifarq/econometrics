@@ -182,4 +182,3 @@ out.forecast.diff <- forecast(model.diff, h = 12)
 autoplot(out.forecast.diff$forecast$diff.cpi) + xlim(2015,NA)
 out.forecast.diff$forecast$diff.cpi.
 tail(cpi)
-5.39145 - 0.026025556
