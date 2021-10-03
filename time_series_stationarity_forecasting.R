@@ -42,12 +42,12 @@ auto.arima(air, seasonal = TRUE)
 
 ### The auto.arima function suggests that the best model to run is an ARIMA(2,1,1) model with 2 lags, 1 difference, and a moving average of order 1. The seasonal part of the model indicates a first difference with a 12-month seasonal lag. 
 
-# (d) Estimating the model
+# Estimating the model
 
 airfit <- auto.arima(air, seasonal = TRUE)
 checkresiduals(airfit)
 
-# (e) Using the model to forecast the number of passengers in the next 24 months
+# Using the model to forecast the number of passengers in the next 24 months
 
 airforecast <- airfit %>% forecast(h=24) 
 autoplot(airforecast)
